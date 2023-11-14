@@ -1,0 +1,64 @@
+# HW- 1: Maheen Naqvi
+# CSCI 381 - Prof. Alla
+
+PART I ANSWER:
+
+Question 3.4:
+
+    <s> I am Sam </s>
+    <s> Sam I am </s>
+    <s> I am Sam </s>
+    <s> I do not like green eggs and Sam </s>
+Answer:
+    words: I | am |Sam | do | not | like | green | eggs | and | <s> | </s>
+    count: 4 | 3  | 4  | 1  | 1   |  1   |  1    |  1   | 1   | 4   |   4
+
+
+    P(Sam | am):
+    Vocabulary size = V = 11
+    Count (am Sam) = 2
+    Count (am) = 3
+    Total number of bigrams that begin with “am” : Count(am Sam) + Count(am I) = Count (am) = 3 + 0 = 3.
+    p* (wi |wi-1) = p* (Sam | am) = (Count("am Sam") + 1) / (Count("am") + V)
+    = (2 + 1) / (3 + 11)
+    = 3 / 14
+    = 0.214
+
+_______________________________________________________________________________________________
+
+PART II ANSWER:
+question 1: 41739
+
+*************************
+question 2: 2468210
+
+*************************
+question 3: percentage of word tokens that did not occurred:  0.01661249548573443
+question 3: percentage of word types that did not occurred: 0.036057692307692304
+
+*************************
+question 4| percentage of bigrams tokens that did not occurred:  0.37614212226309923
+question 4| percentage of bigrams types that did not occurred: 0.2609427609427609
+
+*************************
+question 5| unigram total log probability:  -84.36438778284807
+question 6| unigram perplexity: 1494.6049320718423
+
+Question 5| total log probability bigram without smoothing: N/A
+parameters with zero probability: ['hearing you', 'you reply', 'reply <unk>']
+Question 6| perplexity for bigram without smoothing: N/A
+
+Question 5| total log prob. bi-gram with smoothing: -107.4383014912039
+parameters with zero probability: []
+Question 6| perplexity for bigram withsmoothing: 11034.913393867484
+
+*************************
+Question 7| unigram perplexity: 1097.1903087439796
+Question 7| bigram without smoothing perplexity: N/A
+Question 7| bi gram with smoothing perplexity: 12.066342508246969
+
+*************************
+
+Q7- Discuss the differences in the results you obtained:
+The difference in the result I obtained is due to the bigrams that were not found in the training data
+that is why there is no perplexity for bigrams without smoothing.
